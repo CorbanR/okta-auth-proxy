@@ -40,36 +40,3 @@ module OktaAuthProxy
     end
   end
 end
-
-
-#def authenticated?
-#  #check_remote_ip = nil
-#  #if request.env.has_key? 'HTTP_X_FORWARDED_FOR'
-#  #  check_remote_ip = request.env['HTTP_X_FORWARDED_FOR']
-#  #else
-#  #  check_remote_ip = request.env['HTTP_X_REAL_IP']
-#  #end
-#  if session[:logged] == true #and session[:remote_ip] == check_remote_ip
-#    return true
-#  else
-#    return false
-#  end
-#end
-#
-## Return internal URL or false if unauthorized
-#def authorized?(host)
-#  authorized = false
-#  # Check whether the email address is authorized
-#  if ! session.has_key? :email
-#    return false
-#  end
-#  split_email_address = session[:email].split('@')
-#  if defined? settings.allowed_email_domains and settings.allowed_email_domains.include? split_email_address.last
-#    authorized = true
-#  end
-#  if authorized == true #and settings.routing.has_key? host
-#    return settings.routing[host]
-#  else
-#    return false
-#  end
-#end
